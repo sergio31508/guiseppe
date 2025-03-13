@@ -5,8 +5,8 @@ import './App.css';
 
 function Multas() {
   const [multas, setMultas] = useState([]);
-  const [notificacion, setNotificacion] = useState(false);
-  const [notificacionesActivas, setNotificacionesActivas] = useState(false); // Estado de notificación activa
+  const [notificacion, setNotificacion] = useState(false); // Estado de notificación
+  const [mostrarNotificaciones, setMostrarNotificaciones] = useState(false); // Estado de visualización de notificaciones
   const navigate = useNavigate();
 
   const fetchMultas = async () => {
@@ -32,8 +32,8 @@ function Multas() {
   }, []);
 
   const handleNotificacionClick = () => {
-    setNotificacionesActivas(true); // Cambia el estado a "notificación leída"
-    setNotificacion(false); // Resetea la notificación activa
+    setMostrarNotificaciones(true); // Muestra las notificaciones cuando se hace clic en el botón
+    setNotificacion(false); // Resetea la notificación activa (es decir, ya se vio)
   };
 
   return (
@@ -41,15 +41,26 @@ function Multas() {
       <Navbar /> {/* Asegúrate de que Navbar esté aquí para que se muestre en la pestaña Multas */}
       <h2>Gestión de Multas</h2>
       <button onClick={() => navigate("/registrar-multa")}>Agregar Multa</button>
-      
-      {/* Botón de notificación */}
+
+      {/* Botón de notificación que cambia cuando haya una nueva notificación */}
       <button
         className={`notificacion-btn ${notificacion ? "nueva-notificacion" : ""}`}
         onClick={handleNotificacionClick}
       >
-        {notificacionesActivas ? "Tienes nuevas Notificaciones" :"Notificación Leída" }
+        {notificacion ? "Tienes nuevas notificaciones" : "Ver Notificaciones"}
       </button>
-      
+
+      {/* Si hay notificaciones activas, muestra las notificaciones debajo del botón */}
+      {mostrarNotificaciones && (
+        <div className="notificaciones">
+          <h3>Bandeja de Notificaciones</h3>
+          <ul>
+            <li>Se ha registrado una nueva multa.</li>
+          </ul>
+        </div>
+      )}
+
+      {/* Tabla de multas */}
       <table>
         <thead>
           <tr>

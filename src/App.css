@@ -124,3 +124,122 @@ button:hover {
 .form-container button:hover {
   background-color: #8e24aa;
 }
+/* Contenedor de la notificación */
+.notification-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+/* Estilo general para el botón de notificaciones */
+.notificacion-btn {
+  background-color: transparent;
+  border: 2px solid #6a1b9a; /* Color de borde */
+  color: #6a1b9a; /* Color inicial */
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.notificacion-btn:hover {
+  background-color: #f1f1f1;
+  color: #9c4dcc;
+}
+
+/* Estilos para la bandeja de notificaciones */
+.bandeja-notificaciones {
+  position: fixed;
+  top: 70px; /* Justo debajo del botón de notificaciones */
+  right: 20px;
+  background-color: white;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  width: 300px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 20;
+  padding: 15px;
+}
+
+.bandeja-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.bandeja-header h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.cerrar-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.notificaciones-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.notificaciones-lista li {
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+.notificaciones-lista li:last-child {
+  border-bottom: none;
+}
+/* Estilo general para el botón de notificaciones */
+.notificacion-btn {
+  background-color: transparent;
+  border: 2px solid #6a1b9a; /* Color de borde */
+  color: #6a1b9a; /* Color inicial */
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.notificacion-btn:hover {
+  background-color: #f1f1f1;
+  color: #9c4dcc;
+}
+
+/* Estilos para el estado con nueva notificación */
+.notificacion-btn.nueva-notificacion {
+  background-color: #ffb6c1;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* Estilo para la bandeja de notificaciones */
+.notificaciones {
+  margin-top: 20px;
+  background-color: #fafafa;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.notificaciones ul {
+  list-style: none;
+  padding: 0;
+}
+
+.notificaciones ul li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.notificaciones ul li:last-child {
+  border-bottom: none;
+}

@@ -6,6 +6,9 @@ function RegistrarMulta() {
   const [costo, setCosto] = useState("");
   const [torre, setTorre] = useState("");
   const [departamento, setDepartamento] = useState("");
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [modalMessage, setModalMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false); // Estado de carga
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
@@ -15,6 +18,8 @@ function RegistrarMulta() {
       torre,
       departamento,
     };
+
+    setIsLoading(true); // Activar "Cargando..." antes de la solicitud
 
     // Enviar los datos al servidor
     fetch("http://localhost:5000/multas", {
@@ -27,11 +32,26 @@ function RegistrarMulta() {
       .then((response) => response.json())
       .then((data) => {
         console.log("Multa registrada:", data);
-        navigate("/multas"); // Redirigir a la página de multas
+        setModalMessage(`Multa registrada correctamente: Costo $${data.costo}, Torre ${data.torre}, Departamento ${data.departamento}`);
+        setIsModalVisible(true); // Mostrar el modal
+        setCosto(""); // Limpiar los campos
+        setTorre("");
+        setDepartamento("");
       })
       .catch((error) => {
         console.error("Error al registrar multa:", error);
+        setModalMessage(`Error al registrar la multa: ${error.message}`);
+        setIsModalVisible(true); // Mostrar el modal en caso de error
+      })
+      .finally(() => {
+        setIsLoading(false); // Desactivar "Cargando..."
       });
+  };
+
+  // Función para cerrar el modal y redirigir a "Multas"
+  const closeModalAndRedirect = () => {
+    setIsModalVisible(false); // Cerrar el modal
+    navigate("/multas"); // Redirigir a la página de multas
   };
 
   return (
@@ -60,9 +80,19 @@ function RegistrarMulta() {
             onChange={(e) => setDepartamento(e.target.value)}
             required
           />
-          <button type="submit">Registrar Multa</button>
+          <button type="submit" disabled={isLoading}>Registrar Multa</button>
         </form>
       </div>
+
+      {/* Modal con el resultado */}
+      {isModalVisible && (
+        <div className="modal">
+          <div className="modal-content">
+            <p>{isLoading ? "Cargando..." : modalMessage}</p>
+            <button onClick={closeModalAndRedirect}>Cerrar</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

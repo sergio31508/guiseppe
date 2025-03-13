@@ -243,3 +243,123 @@ button:hover {
 .notificaciones ul li:last-child {
   border-bottom: none;
 }
+/* App.css */
+
+/* Transición de fade */
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-in;
+}
+
+/* Estilo del modal */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+/* Estilos del modal */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 5px;
+  width: 300px;
+  text-align: center;
+}
+
+.modal button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.modal button:hover {
+  background-color: #45a049;
+}
+/* Estilos del modal */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 5px;
+  width: 300px;
+  text-align: center;
+}
+
+.modal button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.modal button:hover {
+  background-color: #45a049;
+}

@@ -1,0 +1,126 @@
+/* Estilos generales para la página */
+.container {
+  padding: 20px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Título de cada pestaña */
+h2, h3 {
+  font-size: 28px;
+  color: #6a1b9a; /* Color morado */
+  margin-bottom: 20px;
+}
+
+/* Pestañas centradas en un cuadro transparente */
+.portones, .administracion, .multas, .permisos {
+  width: 80%; /* Ajusta el tamaño de las pestañas */
+  max-width: 900px; /* Limita el tamaño máximo */
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Fondo transparente */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* Estilo para la barra de navegación */
+.navbar {
+  background-color: #6a1b9a; /* Color morado */
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li {
+  margin: 0 15px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #f1f1f1;
+}
+
+/* Tabla de multas */
+table {
+  width: 80%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+table th {
+  background-color: #6a1b9a;
+  color: white;
+}
+
+table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Botón para agregar multas */
+button {
+  background-color: #6a1b9a;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #8e24aa;
+}
+
+/* Estilo para la página de registrar multa */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  max-width: 600px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+.form-container input {
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.form-container button {
+  margin-top: 20px;
+  background-color: #6a1b9a;
+}
+
+.form-container button:hover {
+  background-color: #8e24aa;
+}

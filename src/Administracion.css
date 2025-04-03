@@ -1,0 +1,157 @@
+/* Estilo del Navbar */
+.navbar {
+  background-color: #4B0082; /* Morado oscuro */
+  padding: 10px 0;
+  width: 100%;
+  position: fixed; /* Fija el navbar en la parte superior */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para el navbar */
+}
+
+/* Estilo del logo en el Navbar */
+.navbar-logo {
+  width: 40px;  /* Ajusta el tamaño según sea necesario */
+  height: auto;
+  cursor: pointer;
+  margin: 0 auto; /* Centra el logo */
+}
+
+/* Estilo de la lista de enlaces en el Navbar */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo de los elementos de la lista */
+.navbar li {
+  display: inline;
+}
+
+/* Estilo de los enlaces en el Navbar */
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 12px;
+  display: block; /* Permite aplicar correctamente el padding */
+}
+
+/* Efecto hover en los enlaces del Navbar */
+.navbar a:hover {
+  background-color: #3e0063; /* Morado más oscuro */
+  border-radius: 4px;
+}
+
+/* Ajuste del contenido para evitar que quede detrás del Navbar */
+.table-container {
+  margin-top: 70px; /* Espacio para el Navbar */
+  padding: 20px;
+  background-color: #f0f0f0; /* Fondo gris */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Estilo del título dentro del contenedor de la tabla */
+.table-container h1 {
+  margin-bottom: 20px;
+}
+
+/* Estilo de la tabla */
+table {
+  width: 90%;
+  max-width: 800px; /* Define un ancho máximo */
+  margin: 0 auto; /* Centra la tabla */
+  border-collapse: collapse;
+}
+
+/* Estilo de las celdas de la tabla */
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Estilo de las cabeceras de la tabla */
+table th {
+  background-color: #4B0082; /* Morado oscuro */
+  color: white;
+}
+
+/* Estilo de las filas pares de la tabla */
+table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Efecto hover en las filas de la tabla */
+table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Estilo del botón Cerrar */
+.logout-button {
+  background-color: #4B0082;  /* Morado oscuro */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  text-align: center;
+  display: block; /* Ocupa todo el ancho disponible */
+  margin: 10px auto; /* Centra el botón */
+}
+
+/* Efecto hover en el botón Cerrar */
+.logout-button:hover {
+  background-color: #3e0063;  /* Morado más oscuro */
+}
+
+/* Estilo de la imagen circular */
+.circular-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* Hace que la imagen sea circular */
+  object-fit: cover; /* Evita que la imagen se deforme */
+}
+
+/* Estilo del enlace de notificaciones con imagen de fondo */
+.notificaciones-link {
+  display: inline-block;
+  margin: 0 auto;
+  background-image: url('./assets/notificaciones.png'); /* Ruta de la imagen */
+  background-size: cover; /* Asegura que la imagen cubra todo el área */
+  background-position: center; /* Centra la imagen */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;  /* Hace que el área del enlace sea circular */
+  text-decoration: none; /* Evita subrayado */
+}
+
+/* Animaciones de entrada y salida */
+.fade-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.3s ease-in, transform 0.3s ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}

@@ -75,11 +75,11 @@ const Login = () => {
         <label htmlFor="remember">Recordar sesión</label>
       </div>
       <div>
-<<<<<<< HEAD
+
         <a href="/recuperar-contrasena">¿Olvidaste tu contraseña?</a>
-=======
+
       <a href="/recuperar">¿Olvidaste tu contraseña?</a>
->>>>>>> 28b164b (ultimo trabajo)
+
       </div>
       {errorMessage && <div>{errorMessage}</div>}
       <button type="submit">Login</button>
